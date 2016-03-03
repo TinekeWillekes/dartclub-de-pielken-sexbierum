@@ -14,6 +14,7 @@
 /.bundle
 /vendor/bundle/
 /vendor/ruby/
+/config/secrets.yml
 
 # minimal Rails specific artifacts
 db/*.sqlite3
@@ -22,7 +23,7 @@ db/*.sqlite3
 /tmp/*
 
 # add /config/database.yml if it contains passwords
-# /config/database.yml
+/config/database.yml
 
 # various artifacts
 **.war
