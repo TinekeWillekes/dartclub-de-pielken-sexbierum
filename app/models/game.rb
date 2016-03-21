@@ -6,10 +6,6 @@ class Game < ActiveRecord::Base
     Player.joins(:games).where(:results => {:place => 1, :game_id => self.id}).first
   end
   
-  def home_player_legs_pro
-    Result.joins(:games).where({:place => 1, :game_id => self.id}).first
-  end
-   
   def home_player=(player)
     self.players << player
 

@@ -1,2 +1,24 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<div class="container">
+    <div class="row">
+    <h3>Game results</h3>
+    <table class="table table-striped table-bordered table-condensed table-hover">
+      <tr>
+        <th>Player name</th>
+        <th>Legs</th>
+        <th>Average</th> 
+        <th>HS</th> 
+        <th>CO%</th> 
+
+      </tr>
+      <% @game_results.each do |g_r| %>
+      <tr>
+        <td><%= g_r.player.name %></td>
+        <td><%= g_r.place = 1 ? g_r.legs_pro : g_r.legs_contra %></td>
+        <td><%= g_r.average%></td>
+        <td><%= g_r.hs%></td>
+        <td><%= g_r.co%></td>  
+      </tr> 
+      <% end %>
+    </table>
+  </div>
+</div>
