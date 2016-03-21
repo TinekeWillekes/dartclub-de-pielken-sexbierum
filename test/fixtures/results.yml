@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  game_id: 1
+  place: 1
+  legs_pro: 1
+  legs_contra: 1
+  average: 9.99
+  hs: 1
+  co: 9.99
+
+two:
+  player_id: 1
+  game_id: 1
+  place: 1
+  legs_pro: 1
+  legs_contra: 1
+  average: 9.99
+  hs: 1
+  co: 9.99
