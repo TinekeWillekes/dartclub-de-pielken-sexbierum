@@ -1,5 +1,5 @@
 class ResultsController < ApplicationController
   def index
-    @results = Result.group('results.player_id')
+    @results = Result.select([:id, :player_id]).group('player_id')
   end
 end
