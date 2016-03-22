@@ -2,6 +2,9 @@ class Game < ActiveRecord::Base
   has_many :results
   has_many :players, :through => :results
   
+  accepts_nested_attributes_for :results, 
+           :allow_destroy => true
+  
   def home_player
     Player.joins(:games).where(:results => {:place => 1, :game_id => self.id}).first
   end

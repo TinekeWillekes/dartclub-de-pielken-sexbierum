@@ -18,6 +18,7 @@ group :development do
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'high_voltage'
 gem 'simple_form'

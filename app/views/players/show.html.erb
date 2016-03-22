@@ -1,2 +1,27 @@
-<h1>Players#show</h1>
-<p>Find me in app/views/players/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <h3>Player information of <%= @player.name %></h3>
+    <p>Games played: <%= @player_results.count('player_id') %></p>
+    <p>Games won: <%= @player.count_games_won %></p>
+    <p>Games lost: <%= @player.count_games_lost %></p>
+    <p>Points: <%= @player.game_points %></p>
+    <p>Legs pro: <%= @player_results.sum(:legs_pro) %></p>
+    <p>Legs contra: <%= @player_results.sum(:legs_contra) %></p>
+    <p>Average: <%= @player_results.average(:average).round(2) %></p>
+    <p>High Score: <%= @player_results.maximum(:hs) %></p>
+    <p>Check-out: <%= @player_results.average(:co).round(2) %> %</p>
+
+    <h3>Games played</h3>
+    <div class="col-lg-6">
+      <% @games.each do |game| %>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Wedstrijd gespeeld op: <%= link_to game.game_date, game %></li>
+        <li class="list-group-item"><%= game.home_player.name %></li>
+        <li class="list-group-item"><%= game.away_player.name %></li>
+      </ul> 
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

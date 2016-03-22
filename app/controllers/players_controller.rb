@@ -6,6 +6,6 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
     @player_results = @player.results.all
-    @games = @player.games
+    @games = @player.games   
   end
 end
