@@ -22,6 +22,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'high_voltage'
 gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
@@ -32,7 +33,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
+  gem 'pg'
 end

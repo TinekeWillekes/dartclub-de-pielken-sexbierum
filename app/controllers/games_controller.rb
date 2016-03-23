@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @games = Game.all
   end
@@ -15,6 +17,7 @@ class GamesController < ApplicationController
   
   def create
     @game = Game.new(game_params)
+    @players = Player.all
     if @game.save
       flash.now[:success] = "Added new game"
       redirect_to games_path
@@ -23,6 +26,30 @@ class GamesController < ApplicationController
       render "new"
     end
   end
+  
+  def edit
+    @game = Game.find(params[:id])
+    @players = Player.all
+  end
+  
+  def update
+    @game = Game.find(params[:id])
+    @players = Player.all
+    if @game.update_attributes(game_params)
+      flash.now[:success] = "Game updated"
+      redirect_to games_path
+    else
+      render 'edit'
+    end
+  end
+  
+  def destroy
+    Game.find(params[:id]).destroy
+    flash[:success] = "Game deleted."
+    redirect_to games_path
+  end
+  
+  private
   
   def game_params
     params.require(:game).permit(:id, :_destroy, :game_date,
