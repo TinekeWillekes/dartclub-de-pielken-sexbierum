@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @games = Game.all
+    @games = Game.all.order(:game_date)
   end
 
   def show
