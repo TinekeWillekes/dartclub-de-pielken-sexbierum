@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <h3>Games</h3><%= link_to "New game", new_game_path, class: "btn btn-primary" %>
+    <h3>Games</h3><% if user_signed_in? && current_user.id == 1 %>
+                  <%= link_to "New game", new_game_path, class: "btn btn-primary" %>
+                  <% else %>
+                  <% end %>
     <div class="column">
       <table class="table">
         <tbody>

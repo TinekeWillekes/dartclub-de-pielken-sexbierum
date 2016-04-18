@@ -1,6 +1,9 @@
 <td><% link_to game.id, game %></td>
 <td><%= link_to game.game_date, game %></td>
 <td><%= game.home_player.name %> - <%= game.away_player.name %></td>
+<% if user_signed_in? && current_user.id == 1 %>
 <td><%= link_to("Edit", edit_game_path(:id => game.id)) %>
     <%= link_to "Delete", game, method: :delete,
                                   data: { confirm: "You sure?" } %></td>
+<% else %>
+<% end %>

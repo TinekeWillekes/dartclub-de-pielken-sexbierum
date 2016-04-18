@@ -4,6 +4,7 @@
     <table class="table table-striped table-bordered table-condensed table-hover">
       <tr>
         <th>Player name</th>
+        <th>Points</th>
         <th>Legs</th>
         <th>Average</th> 
         <th>HS</th> 
@@ -13,6 +14,7 @@
       <% @game_results.each do |g_r| %>
       <tr>
         <td><%= g_r.player.name %></td>
+        <td><%= g_r.game_points %></td>
         <td><%= g_r.place = 1 ? g_r.legs_pro : g_r.legs_contra %></td>
         <td><%= g_r.average%></td>
         <td><%= g_r.hs%></td>
