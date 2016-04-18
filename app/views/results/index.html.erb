@@ -20,12 +20,12 @@
         <td><%= r.player.results.count %></td>
         <td><%= r.player.count_games_won %></td>
         <td><%= r.player.count_games_lost %></td>
-        <td><%= r.player.game_points %></td>
+        <td><%= r.player.results.sum(:game_points) %></td>
         <td><%= r.player.results.sum(:legs_pro)%></td>
         <td><%= r.player.results.sum(:legs_contra)%></td>
-        <td><%= r.player.results.average(:average).round(2)%></td>
+        <td><%= r.player.results.average(:average).round(1)%></td>
         <td><%= r.player.results.maximum(:hs)%></td>
-        <td><%= r.player.results.average(:co).round(2)%></td>
+        <td><%= r.player.results.average(:co).round(1)%></td>
       </tr> 
       <% end %>
     </table>

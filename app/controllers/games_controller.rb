@@ -53,7 +53,7 @@ class GamesController < ApplicationController
   
   def game_params
     params.require(:game).permit(:id, :_destroy, :game_date,
-                                    :results_attributes => [:id, :_destroy, :player_id, :place, :game_id, :legs_pro, :legs_contra,
+                                    :results_attributes => [:id, :_destroy, :player_id, :place, :game_id, :game_points, :legs_pro, :legs_contra,
                                     :average, :hs, :co])
   end
 end

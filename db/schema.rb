@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322075823) do
+ActiveRecord::Schema.define(version: 20160418134453) do
 
   create_table "games", force: :cascade do |t|
     t.date     "game_date"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160322075823) do
     t.decimal  "co",          precision: 5, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "game_points"
   end
 
   create_table "users", force: :cascade do |t|

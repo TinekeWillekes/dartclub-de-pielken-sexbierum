@@ -8,6 +8,7 @@ class Result < ActiveRecord::Base
          
   validates :player_id, presence: true
   validates :place, presence: true
+  validates :game_points, presence: true
   validates :legs_pro, presence: true, numericality: true
   validates :legs_contra, presence: true, numericality: true
   validates :average, presence: true, numericality: true

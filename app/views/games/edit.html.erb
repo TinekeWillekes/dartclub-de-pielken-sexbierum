@@ -26,12 +26,17 @@
     <div class="form-group">   
       <%= result.collection_select(:player_id, @players, :id, :name, prompt: "Home player" ) %>
     </div>
-    
+
     <div class="form-group">
       <%= result.label :place, "If home player check box" %>
       <%= result.check_box :place %>
     </div>
-    
+        
+    <div class="form-group">
+      <%= result.label :game_points %>
+      <%= result.text_field :game_points , class: 'form-control' %>
+    </div>
+
     <div class="form-group">
       <%= result.label :legs_pro %>
       <%= result.text_field :legs_pro , class: 'form-control' %>

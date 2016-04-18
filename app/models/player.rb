@@ -9,8 +9,4 @@ class Player < ActiveRecord::Base
   def count_games_lost
     Game.joins(:players).where.not(:results => {:legs_pro => 4}).where(:results => {:player_id => self.id}).count
   end
-  
-  def game_points
-    (Game.joins(:players).where(:results => {:legs_pro => 4, :player_id => self.id}).count)*3
-  end
 end
