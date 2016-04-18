@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h3>Player information of <%= @player.name %></h3>
+    <h3>Player information of <%= @player.name %></h3><p><%= back_to(:players) %></p>
     <p>Games played: <%= @player_results.count('player_id') %></p>
     <p>Games won: <%= @player.count_games_won %></p>
     <p>Games lost: <%= @player.count_games_lost %></p>
