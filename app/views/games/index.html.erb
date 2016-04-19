@@ -1,11 +1,25 @@
 <div class="container">
   <div class="row">
-    <h3>Games</h3><% if user_signed_in? && current_user.id == 1 %>
+    <h3>Games<div class="button-right"><% if user_signed_in? && current_user.id == 1 %>
                   <%= link_to "New game", new_game_path, class: "btn btn-primary" %>
                   <% else %>
-                  <% end %>
-    <div class="column">
+                  <% end %></div></h3>
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Games played in the competition</div>
+
+      <!-- Table -->
       <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>   
+            <th>Match</th>
+            <% if user_signed_in? && current_user.id == 1 %>
+            <th>Actions</th> 
+            <% else %>
+            <% end %>
+          </tr>    
+        </thead>
         <tbody>
           <% @games.each do |game| %>
             <tr>

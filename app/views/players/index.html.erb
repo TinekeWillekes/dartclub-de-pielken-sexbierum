@@ -1,8 +1,25 @@
 <div class="container">
   <div class="row">
-    <h3>Players</h3>
-    <div class="column">
+    <h3>Players<div class="button-right"><% if user_signed_in? && current_user.id == 1 %>
+                  <%= link_to "New player", new_player_path, class: "btn btn-primary" %>
+                  <% else %>
+                  <% end %></div></h3>
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Players names competing in the dart competition</div>
+
+      <!-- Table -->
       <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>   
+            <th>Name</th>
+            <% if user_signed_in? && current_user.id == 1 %>
+            <th>Actions</th> 
+            <% else %>
+            <% end %>     
+          </tr>    
+        </thead>
         <tbody>
           <% @players.each do |player| %>
             <tr>
@@ -11,6 +28,6 @@
           <% end %>
         </tbody>
       </table>
-    </div>
+    </div>  
   </div>
 </div>

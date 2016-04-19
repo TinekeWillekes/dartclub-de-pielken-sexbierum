@@ -2,6 +2,8 @@ class Player < ActiveRecord::Base
   has_many :results
   has_many :games, :through => :results
   
+  validates :name, presence: true
+  
   def count_games_won
     Game.joins(:players).where(:results => {:legs_pro => 4, :player_id => self.id}).count
   end

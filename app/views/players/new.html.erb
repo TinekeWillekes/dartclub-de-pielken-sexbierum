@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <h3>New player</h3><p><%= back_to(:players) %></p>
+    <div class="col-lg-12">
+      <div class="authform">
+      <%= form_for(@player) do |f| %>
+          <% if @player.errors.any? %>
+          <div id="error_explanation">
+
+            <h2><%= pluralize(@player.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+            <ul>
+              <% @player.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+        <%= f.submit "Create new player", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
