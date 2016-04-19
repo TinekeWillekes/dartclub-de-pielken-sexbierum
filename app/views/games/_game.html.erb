@@ -2,8 +2,8 @@
 <td><%= link_to game.game_date, game %></td>
 <td><%= game.home_player.name %> - <%= game.away_player.name %></td>
 <% if user_signed_in? && current_user.id == 1 %>
-<td><%= link_to("Edit", edit_game_path(:id => game.id)) %>
-    <%= link_to "Delete", game, method: :delete,
+<td><%= link_to("", edit_game_path(:id => game.id), class: "glyphicon glyphicon-pencil") %>
+    <%= link_to "", game, method: :delete, class: "glyphicon glyphicon-trash",
                                   data: { confirm: "Are you sure you want to delete this game?" } %></td>
 <% else %>
 <% end %>
