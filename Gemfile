@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'coffee-script-source', '1.8.0'
 gem 'bcrypt'
+gem "paperclip", "~> 4.1.1"
 
 group :development, :test do
   gem 'byebug'
@@ -19,7 +20,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
-gem 'devise'
+gem 'devise', '~>3.5.6'
 gem 'high_voltage'
 gem 'simple_form'
 

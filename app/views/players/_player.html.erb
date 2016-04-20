@@ -1,4 +1,4 @@
-<td><%= player.id %></td>
+<td><div class="round-image-50"><%= image_tag(player.avatar.url(:thumb)) %></div></td>
 <td><%= link_to player.name, player %></td>
 <% if user_signed_in? && current_user.id == 1 %>
 <td><%= link_to("", edit_player_path(:id => player.id), class: "glyphicon glyphicon-pencil") %>
