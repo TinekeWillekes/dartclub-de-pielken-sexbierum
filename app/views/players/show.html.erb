@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
-    <h3><%= @player.name %></h3><p><%= back_to(:players) %></p>
-    <div class="col-md-4">
+      <div class="col-md-4">
+      <h3><%= @player.name %><div class="right-round-image-50"><%= image_tag(@player.avatar.url) %></div></h3><p><%= back_to(:players) %></p>
+    
       <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">Overview of players statistics</div>
@@ -29,8 +30,8 @@
   </div>
     
   <div class="row">
-    <h3>Games played</h3>
     <div class="col-md-4">
+    <h3>Games played</h3>
       <% @games.each do |game| %>
       <ul class="list-group">
         <li class="list-group-item list-group-item-success">Wedstrijd gespeeld op: <%= link_to game.game_date, game %></li>

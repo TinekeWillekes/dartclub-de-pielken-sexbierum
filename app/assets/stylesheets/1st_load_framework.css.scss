@@ -26,6 +26,33 @@ img {
     img { width: 100% }
 }
 
+.right-round-image-50 {
+    float: right;
+    background-color: white;
+    border: 2px solid #d9d9d9;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
+.avatar-round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
