@@ -142,3 +142,10 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+.navbar-text-center {
+    text-align: center;
+    color: #777;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
