@@ -7,6 +7,9 @@ jQuery ->
     data: $('#average_chart').data('results')
     xkey: 'created_at'
     ykeys: ['hs', 'average', 'co']
+    ymax: '180'
     parseTime: false,
-    labels: ['Hs', 'Average', 'Co']
+    labels: ['High score', 'Average', 'Check-out']
+    resize: true,
+    smooth: true
 
