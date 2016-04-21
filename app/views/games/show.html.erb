@@ -7,9 +7,8 @@
         <th>Points</th>
         <th>Legs</th>
         <th>Average</th> 
-        <th>HS</th> 
         <th>CO%</th> 
-
+        <th>HS</th> 
       </tr>
       <% @game_results.each do |g_r| %>
       <tr>
@@ -17,8 +16,8 @@
         <td><%= g_r.game_points %></td>
         <td><%= g_r.place = 1 ? g_r.legs_pro : g_r.legs_contra %></td>
         <td><%= g_r.average%></td>
+        <td><%= g_r.co%></td>
         <td><%= g_r.hs%></td>
-        <td><%= g_r.co%></td>  
       </tr> 
       <% end %>
     </table>

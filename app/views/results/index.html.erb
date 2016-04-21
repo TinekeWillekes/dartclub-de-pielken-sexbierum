@@ -11,8 +11,8 @@
         <th>Legs pro</th> 
         <th>Legs contra</th> 
         <th>Average</th> 
+        <th>CO(%)</th>
         <th>HS</th> 
-        <th>CO(%)</th>    
       </tr>
       <% @results.each do |r| %>
       <tr>
@@ -24,8 +24,8 @@
         <td><%= r.player.results.sum(:legs_pro)%></td>
         <td><%= r.player.results.sum(:legs_contra)%></td>
         <td><%= r.player.results.average(:average).round(1)%></td>
-        <td><%= r.player.results.maximum(:hs)%></td>
         <td><%= r.player.results.average(:co).round(1)%></td>
+        <td><%= r.player.results.maximum(:hs)%></td>
       </tr> 
       <% end %>
     </table>
