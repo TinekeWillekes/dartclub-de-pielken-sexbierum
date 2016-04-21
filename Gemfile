@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'coffee-script-source', '1.8.0'
 gem 'bcrypt'
 gem "paperclip", "~> 4.1.1"
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug'
