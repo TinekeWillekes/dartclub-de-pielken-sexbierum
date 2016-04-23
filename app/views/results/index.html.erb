@@ -16,7 +16,7 @@
       </tr>
       <% @results.each do |r| %>
       <tr>
-        <td><%= r.player.name %></td>
+        <td><%= link_to r.player.name, player_path(:id => r.player.id), data: { no_turbolink: true } %></td>
         <td><%= r.player.results.count %></td>
         <td><%= r.player.count_games_won %></td>
         <td><%= r.player.count_games_lost %></td>

@@ -8,8 +8,8 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
     @player_results = @player.results.all
-    @games = @player.games
-    @chart_results = @player.results.all
+    @games = @player.games.order('created_at ASC')
+    @chart_results = @player.results.all.order('created_at ASC')
   end
   
   def new
