@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :users
   resources :players
   resources :games
-  resources :results
-  
+  resources :results do 
+    collection do
+      get 'sort_by_average'
+      get 'sort_by_co'
+      get 'sort_by_hs'
+    end
+  end
 end

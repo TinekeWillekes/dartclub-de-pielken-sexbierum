@@ -7,14 +7,14 @@
         <th>Played</th>
         <th>Won</th> 
         <th>Lost</th> 
-        <th><%= link_to "Points", results_path %></th>
+        <th><%= link_to "Points", results_path %></th> 
         <th>Legs pro</th> 
         <th>Legs contra</th> 
         <th><%= link_to "Average", {:controller => "results", :action => "sort_by_average"}%></th> 
         <th><%= link_to "CO", {:controller => "results", :action => "sort_by_co"}%> %</th>
         <th><%= link_to "HS", {:controller => "results", :action => "sort_by_hs"}%></th> 
       </tr>
-      <% @results.each do |r| %>
+      <% @order_hs.each do |r| %>
       <tr>
         <td><%= link_to r.player.name, player_path(:id => r.player.id), data: { no_turbolink: true } %></td>
         <td><%= r.player.results.count %></td>
@@ -28,6 +28,6 @@
         <td><%= r.player.results.maximum(:hs)%></td>
       </tr> 
       <% end %>
-    </table>
+    </table> 
   </div>
 </div>
