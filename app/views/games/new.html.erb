@@ -24,7 +24,7 @@
     
     <%= f.fields_for :results, Result.new do |result| %>
     <div class="form-group">   
-      <%= result.collection_select(:player_id, @players, :id, :name, prompt: "Home player" ) %>
+      <%= result.collection_select(:player_id, @players.order('name asc'), :id, :name, prompt: "Home player" ) %>
     </div>
     
     <div class="form-group">
@@ -64,7 +64,7 @@
     
     <%= f.fields_for :results, Result.new do |result| %>
     <div class="form-group">  
-      <%= result.collection_select(:player_id, @players, :id, :name, prompt: "Away player") %>
+      <%= result.collection_select(:player_id, @players.order('name asc'), :id, :name, prompt: "Away player") %>
     </div> 
     
     <div class="form-group">
