@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @players = Player.all.paginate(:page => params[:page], :per_page => 7)
+    @players = Player.all.order('name ASC').paginate(:page => params[:page], :per_page => 7)
   end
 
   def show
