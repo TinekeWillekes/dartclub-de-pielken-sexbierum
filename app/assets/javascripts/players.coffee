@@ -5,7 +5,7 @@ jQuery ->
   Morris.Line
     element: 'average_chart'
     data: $('#average_chart').data('results')
-    xkey: 'created_at'
+    xkey: 'game_points'
     ykeys: ['hs', 'average', 'co']
     ymax: '180'
     parseTime: false,

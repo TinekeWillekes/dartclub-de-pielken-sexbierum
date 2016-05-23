@@ -1,5 +1,6 @@
 <td><%= link_to game.game_date, game %></td>
-<td><%= game.home_player.name %> - <%= game.away_player.name %></td>
+<td><%= link_to game.home_player.name, {:controller => "players", :action => "show", :id => game.home_player.id}, data: { no_turbolink: true } %> - 
+    <%= link_to game.away_player.name, {:controller => "players", :action => "show", :id => game.away_player.id}, data: { no_turbolink: true } %></td>
 <% if user_signed_in? && current_user.id == 1 %>
 <td><%= link_to("", edit_game_path(:id => game.id), class: "glyphicon glyphicon-pencil") %>
     <%= link_to "", game, method: :delete, class: "glyphicon glyphicon-trash",
