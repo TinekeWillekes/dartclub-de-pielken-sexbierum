@@ -9,7 +9,7 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
     @player_results = @player.results.all
     @games = @player.games.order('game_date ASC')
-    @chart_results = @player.results.all.order('created_at ASC')
+    @chart_results = @player.results.all
   end
   
   def new
